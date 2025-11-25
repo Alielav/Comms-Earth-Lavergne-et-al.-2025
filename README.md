@@ -12,6 +12,8 @@ Script to run a modified version of Graven et al. (2020) model: Graven et al. 20
 Script to plot output from modified Graven et al. (2020) model and produce Figure 6: Plot outputs carbon cycle model L2025 - figure 6.py
 
 Input data to run .py scripts:
+- C3/C4 model: formatted input climate and remote sensing data available on request
+- Simple carbon cycle model: formatted input data available via Heather Graven Github
 
 # Author and contact
 
