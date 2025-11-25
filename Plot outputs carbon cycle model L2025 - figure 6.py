@@ -17,15 +17,11 @@ from scipy.interpolate import interp1d
 ## Keeling et al. (2017) simulations
 # constant Δ (18 permil) and constant C4 fraction
 data1 = loadmat('Simus_constant_delta_constant_fracc4_K2017.mat')  
-SSPY1 = data1['SSPY']  # Outputs
-param1 = data1['param']  # Parameters
 inputdata1 = data1['inputdata']  # Inputs
 d13C1= data1['atmospheric d13C']  # Atmospheric d13CO2
 
 # variable Δ as in K2017 (with CO2 effect from Schubert and Jahren (2015)) and constant C4 fraction
 data2 = loadmat('Simus_variable_delta_constant_fracc4_K2017.mat')  
-SSPY2 = data2['SSPY']  # Outputs
-param2 = data2['param']  # Parameters
 inputdata2 = data2['inputdata']  # Inputs
 d13C2= data2['atmospheric d13C']  # Atmospheric d13CO2
 
@@ -35,22 +31,16 @@ d13C2= data2['atmospheric d13C']  # Atmospheric d13CO2
 
 # constant Δ with constant C4 fraction
 data3 = loadmat('Simus_constant_delta_constant_fracc4_L2025.mat')  
-SSPY3 = data3['SSPY']  # Outputs
-param3 = data3['param']  # Parameters
 inputdata3 = data3['inputdata']  # Inputs
 d13C3= data3['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
 
 # variable Δ with constant C4 fraction and cO2 fertilisation removed for box 1
 data4 = loadmat('Simus_variable_delta_constant_fracc4_L2025.mat')  
-SSPY4 = data4['SSPY']  # Outputs
-param4 = data4['param']  # Parameters
 inputdata4 = data4['inputdata']  # Inputs
 d13C4= data4['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
 
 # variable Δ with variable C4 fraction and CUE and cO2 fertilisation removed for box 1
 data5 = loadmat('Simus_variable_delta_variale_fracc4_L2025.mat') 
-SSPY5 = data5['SSPY']  # Outputs
-param5 = data5['param']  # Parameters
 inputdata5 = data5['inputdata']  # Inputs
 d13C5= data5['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
 
@@ -121,12 +111,7 @@ def BDreaddata(filename):
 # Define datafiles used in all simulations
 del13atmf = 'c13_cmip6_hist.txt'
 
-
-# List of future scenario names
-SSP = ['119', '126', '245', '3B', '534', '5B']
-
-rc = 0
-pco2atmf = f'co2_SSP{SSP[rc]}.txt'
+pco2atmf = f'co2_hist.txt'
 
 inputdata = {}
 inputdata['CO2time'], inputdata['CO2data'] = BDreaddata(pco2atmf)
@@ -177,7 +162,7 @@ import matplotlib.ticker as mticker
 import matplotlib.patches as mpatches
 from matplotlib.lines import Line2D
 
-# Define colors for plotting 6 SSPs
+# Define colors 
 sspco = np.array([
     [25, 76, 156],
     [62, 153, 17],
@@ -226,11 +211,11 @@ row = 0
 ax = fig_figure6.add_subplot(gs[row, column])
 
 ax.plot(inputdata['C13time'], inputdata['C13data'],'k-',lw=2.5)
-ax.plot(np.arange(1982, 2026), midd13C1[481:, 0, rc]-k, color=sspco[0])
-ax.plot(np.arange(1982, 2026), midd13C2[481:, 0, rc]-k, color=sspco[1])
+ax.plot(np.arange(1982, 2026), midd13C1[481:, 0, 0]-k, color=sspco[0])
+ax.plot(np.arange(1982, 2026), midd13C2[481:, 0, 0]-k, color=sspco[1])
 
-ax.fill_between(np.arange(1982, 2026), mind13C1[481:, 0, rc]-k, maxd13C1[481:, 0, rc]-k, color=sspco[0], alpha=0.5)
-ax.fill_between(np.arange(1982, 2026), mind13C2[481:, 0, rc]-k, maxd13C2[481:, 0, rc]-k, color=sspco[1], alpha=0.5)
+ax.fill_between(np.arange(1982, 2026), mind13C1[481:, 0, 0]-k, maxd13C1[481:, 0, 0]-k, color=sspco[0], alpha=0.5)
+ax.fill_between(np.arange(1982, 2026), mind13C2[481:, 0, 0]-k, maxd13C2[481:, 0, 0]-k, color=sspco[1], alpha=0.5)
 
 ax.set_ylabel(u'$\mathregular{\u03B4}^{13}$CO$_{2}$ (‰)',fontsize=14)
 ax.set_ylim((-9.0, -7.2))
@@ -252,13 +237,13 @@ row = 0
 ax = fig_figure6.add_subplot(gs[row, column])
 
 ax.plot(inputdata['C13time'], inputdata['C13data'],'k-',lw=2.5)
-ax.plot(np.arange(1982, 2026), midd13C3[481:, 0, rc]-k, color=sspco[0])
-ax.plot(np.arange(1982, 2026), midd13C4[481:, 0, rc]-k, color=sspco[1])
-ax.plot(np.arange(1982, 2026), midd13C5[481:, 0, rc]-k, color=sspco[2])
+ax.plot(np.arange(1982, 2026), midd13C3[481:, 0, 0]-k, color=sspco[0])
+ax.plot(np.arange(1982, 2026), midd13C4[481:, 0, 0]-k, color=sspco[1])
+ax.plot(np.arange(1982, 2026), midd13C5[481:, 0, 0]-k, color=sspco[2])
 
-ax.fill_between(np.arange(1982, 2026), mind13C3[481:, 0, rc]-k, maxd13C3[481:, 0, rc]-k, color=sspco[0], alpha=0.5)
-ax.fill_between(np.arange(1982, 2026), mind13C4[481:, 0, rc]-k, maxd13C4[481:, 0, rc]-k, color=sspco[1], alpha=0.5)
-ax.fill_between(np.arange(1982, 2026), mind13C5[481:, 0, rc]-k, maxd13C5[481:, 0, rc]-k, color=sspco[2], alpha=0.5)
+ax.fill_between(np.arange(1982, 2026), mind13C3[481:, 0, 0]-k, maxd13C3[481:, 0, 0]-k, color=sspco[0], alpha=0.5)
+ax.fill_between(np.arange(1982, 2026), mind13C4[481:, 0, 0]-k, maxd13C4[481:, 0, 0]-k, color=sspco[1], alpha=0.5)
+ax.fill_between(np.arange(1982, 2026), mind13C5[481:, 0, 0]-k, maxd13C5[481:, 0, 0]-k, color=sspco[2], alpha=0.5)
 
 ax.set_ylabel(u'$\mathregular{\u03B4}^{13}$CO$_{2}$ (‰)',fontsize=14)
 ax.set_ylim((-9, -7.2))
