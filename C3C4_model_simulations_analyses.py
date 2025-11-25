@@ -120,7 +120,7 @@ mymap = mcolors.LinearSegmentedColormap.from_list('my_colormap', colors)
 ### CLIMATE
 
 ## Daytime temperature (estimated from WATCH WFDEI product)
-ds1 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/splash_1979_2018_WATCH_WFDEI/1979_2018_Tdaytime.nc')
+ds1 = netCDF4.Dataset('Data/splash_1979_2018_WATCH_WFDEI/1979_2018_Tdaytime.nc')
 ds1.set_auto_mask(False)
 temp = ds1['Tdtime'][:]
 ## 1982:2016 period
@@ -130,21 +130,21 @@ ds1.close()
 
 
 ## Atmospheric CO2 concentration
-ds2 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/co2_annmean_0.5_1982_2016.nc')
+ds2 = netCDF4.Dataset('~/Data/co2_annmean_0.5_1982_2016.nc')
 ds2.set_auto_mask(False)
 co2 = ds2['co2'][:]         # Note - spatially constant but mapped.
 ds2.close()
 
 
 # Elevation (WATCH WFDEI product)
-ds3 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/elev.nc')
+ds3 = netCDF4.Dataset('~/Data/elev.nc')
 ds3.set_auto_mask(False)
 elev = ds3['elev'][:]  # Note - temporally constant but repeated
 ds3.close()
 
 
 ## Vapour pressure deficit (estimated from WATCH WFDEI product)
-ds4 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/splash_1979_2018_WATCH_WFDEI/1979_2018_vpd.nc')
+ds4 = netCDF4.Dataset('~/Data/splash_1979_2018_WATCH_WFDEI/1979_2018_vpd.nc')
 ds4.set_auto_mask(False)
 vpd = ds4['vpd'][:]
 ## 1982:2016 period
@@ -154,14 +154,14 @@ ds4.close()
 
 
 ## fraction of absorbed photosynthetic active radiation (fAPAR3g product)
-ds5 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/fAPAR/fAPAR3g_v2/fAPAR3g_v2_1982_2016_FILLED.nc')
+ds5 = netCDF4.Dataset('~/Data/fAPAR/fAPAR3g_v2/fAPAR3g_v2_1982_2016_FILLED.nc')
 ds5.set_auto_mask(False)
 fapar = ds5['FAPAR_FILLED'][:]
 ds5.close()
 
 
 ## Photosynthetic Photon Flux Density (WATCH WFDEI product)
-ds6 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/watch_wfdei/PPFD_monthly/1982_2016.ppfd.nc')
+ds6 = netCDF4.Dataset('~/Data/watch_wfdei/PPFD_monthly/1982_2016.ppfd.nc')
 ds6.set_auto_mask(False)
 ppfd = ds6['ppfd'][:]
 ppfd = ppfd[:,::-1,:]
@@ -174,7 +174,7 @@ ds6.close()
 
 
 ## Soil moisture from SPLASH (estimated from WATCH WFDEI product)
-ds7 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/splash_1979_2018_WATCH_WFDEI/1979_2018.theta.nc')
+ds7 = netCDF4.Dataset('~/Data/splash_1979_2018_WATCH_WFDEI/1979_2018.theta.nc')
 ds7.set_auto_mask(False)
 theta = ds7['theta'][:]
 ## 1982:2016 period
@@ -187,7 +187,7 @@ ds7.close()
 ## Atmospheric d13CO2 
 
 import numpy as geek
-ds10 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/d13co2_annmean_0.5_1982_2016.nc')
+ds10 = netCDF4.Dataset('~/Data/d13co2_annmean_0.5_1982_2016.nc')
 ds10.set_auto_mask(False)
 d13CO2 = ds10['d13CO2'][:]
 
@@ -200,7 +200,7 @@ patm = pmodel.calc_patm(elev)
 ## LANDCOVER/LAND-USE
 
 ## MODIS tree cover
-ds6 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/MODIS_VCF_Tree_Cover/VCF5KYR_1982_2016_05d.nc')
+ds6 = netCDF4.Dataset('~/Data/MODIS_VCF_Tree_Cover/VCF5KYR_1982_2016_05d.nc')
 ds6.set_auto_mask(False)
 
 ## Percent Tree Cover: Percent of pixel covered by tree canopy
@@ -209,13 +209,13 @@ ds6.close()
 
 
 ## MODIS land cover
-ds6 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/landcover/MODIS/modis_snowandice_0.5d-2010.nc')
+ds6 = netCDF4.Dataset('~/Data/landcover/MODIS/modis_snowandice_0.5d-2010.nc')
 ds6.set_auto_mask(False)
 
 snowandice = ds6['snowandice'][:]
 ds6.close()
 
-ds6 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/landcover/MODIS/modis_barren_sparsely_vegetated_0.5d-2010.nc')
+ds6 = netCDF4.Dataset('~/Data/landcover/MODIS/modis_barren_sparsely_vegetated_0.5d-2010.nc')
 ds6.set_auto_mask(False)
 
 barren_sparsely_vegetated = ds6['barren_sparsely_vegetated'][:]
@@ -239,13 +239,13 @@ areas_to_remove[areas_to_remove >= 100] = np.nan
 
 ## LUH2 land cover
 # C4 crops
-ds6 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/landcover/LUH2/luh2_c4crops.nc')
+ds6 = netCDF4.Dataset('~/Data/landcover/LUH2/luh2_c4crops.nc')
 ds6.set_auto_mask(False)
 
 luh2_c4crops = ds6['c4crops'][:]
 
 # C3 crops
-ds6 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/landcover/LUH2/luh2_c3crops.nc')
+ds6 = netCDF4.Dataset('~/Data/landcover/LUH2/luh2_c3crops.nc')
 ds6.set_auto_mask(False)
 
 luh2_c3crops = ds6['c3crops'][:]
@@ -255,7 +255,7 @@ luh2_crops = luh2_c3crops+luh2_c4crops
 
 
 ## urban areas
-ds6 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/landcover/LUH2/luh2_urban.nc')
+ds6 = netCDF4.Dataset('~/Data/landcover/LUH2/luh2_urban.nc')
 ds6.set_auto_mask(False)
 
 luh2_urban = ds6['urban'][:]
@@ -280,7 +280,7 @@ theta[theta < 0] = np.nan
 
 
 ## Outputs modern simulations
-ds6 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/pmodel_outputs_modern.nc')
+ds6 = netCDF4.Dataset('~/Outputs/pmodel_outputs_modern.nc')
 
 ds6.set_auto_mask(False)
 temp_weight = ds6['temp'][:,:,:]
@@ -298,7 +298,7 @@ finalgppc3[finalgppc3 > 100000] = np.nan
 ### Outputs for attribution analysis
 
 ## Outputs modern simulations without co2 effect
-ds7 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/pmodel_outputs_modern_splash_co2_effect.nc')
+ds7 = netCDF4.Dataset('~/Outputs/pmodel_outputs_modern_co2_effect.nc')
 ds7.set_auto_mask(False)
 finalgppc3_co2 = ds7['gppc3'][:,:,:]
 finalgppc4_co2 = ds7['ggpc4'][:,:,:]
@@ -307,7 +307,7 @@ D13Cplant_C4_co2 = ds7['D13Cc4'][:,:,:]
 ds7.close()
 
 ## Outputs modern simulations without temp effect
-ds7 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/pmodel_outputs_modern_splash_temp_effect.nc')
+ds7 = netCDF4.Dataset('~/Outputs/ppmodel_outputs_modern_temp_effect.nc')
 ds7.set_auto_mask(False)
 finalgppc3_temp = ds7['gppc3'][:,:,:]
 finalgppc4_temp = ds7['ggpc4'][:,:,:]
@@ -316,7 +316,7 @@ D13Cplant_C4_temp = ds7['D13Cc4'][:,:,:]
 ds7.close()
 
 ## Outputs modern simulations without vpd effect
-ds7 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/pmodel_outputs_modern_splash_vpd_effect.nc')
+ds7 = netCDF4.Dataset('~/Outputs/pmodel_outputs_modern_vpd_effect.nc')
 ds7.set_auto_mask(False)
 finalgppc3_vpd = ds7['gppc3'][:,:,:]
 finalgppc4_vpd = ds7['ggpc4'][:,:,:]
@@ -327,7 +327,7 @@ ds7.close()
 finalgppc4_vpd[finalgppc4_vpd > 100000] = np.nan
 
 ## Outputs modern simulations without theta effect
-ds7 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/pmodel_outputs_modern_splash_theta_effect.nc')
+ds7 = netCDF4.Dataset('/~/Outputs/pmodel_outputs_modern_theta_effect.nc')
 ds7.set_auto_mask(False)
 finalgppc3_theta = ds7['gppc3'][:,:,:]
 finalgppc4_theta = ds7['ggpc4'][:,:,:]
@@ -512,7 +512,7 @@ D13C_tot_crops = (D13C_c4_herb_crops*np.nanmedian(tau1) + D13C_c3_herb_crops*np.
 
 ### Map from Still et al. (2009)
 
-C4_frac_still = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/C3_C4_fraction/ISLSCP_C4_1DEG_932/c4_percent_05d.nc')
+C4_frac_still = netCDF4.Dataset('~/Data/C3_C4_fraction/ISLSCP_C4_1DEG_932/c4_percent_05d.nc')
 C4_frac_still.set_auto_mask(False)
 C4_frac_still = C4_frac_still['C4frac'][:]
 
@@ -555,7 +555,7 @@ D13C_tot_still = (D13C_c4_herb_still*np.nanmedian(tau1) + D13C_c3_herb_still*np.
 
 ### Map from Luo et al. (2024, Nat. comms.)
 
-C4_frac_luo1 = netCDF4.Dataset('/Users/alienorlavergne/Desktop/Research and Teaching/Data/C3_C4_fraction/Luoetal/C4_distribution_NUS_v2.2.nc')
+C4_frac_luo1 = netCDF4.Dataset('~/Data/C3_C4_fraction/Luoetal/C4_distribution_NUS_v2.2.nc')
 C4_frac_luo1.set_auto_mask(False)
 C4_frac_luo1 = C4_frac_luo1['C4_area'][:]
 
@@ -635,7 +635,7 @@ def get_data(lat_input, long_input):
 
 
 ## Extraction soil isotopic data from Ning Dong et al. compilation
-data_isotope_ning = pd.read_csv('/Users/alienorlavergne/Desktop/Research and Teaching/LEMONTREE_project/Modern/Glob_Soil_δ13C.csv', index_col=0, na_values=['(NA)'])
+data_isotope_ning = pd.read_csv('~/Data/Glob_Soil_δ13C.csv', index_col=0, na_values=['(NA)'])
 
 data_isotope_ning['Lat'] = data_isotope_ning['Lat'].apply(pd.to_numeric, errors='coerce')
 data_isotope_ning['Lon'] = data_isotope_ning['Lon'].apply(pd.to_numeric, errors='coerce')
@@ -644,7 +644,7 @@ data_isotope_ning = data_isotope_ning.dropna(subset=["Lat","Lon"])
 
 ## Extraction leaf isotopic data from Cornwell et al. compilation
 
-data_isotope_corn = pd.read_csv('/Users/alienorlavergne/Desktop/Research and Teaching/LEMONTREE_project/Modern/leaf13C.csv', index_col=0, na_values=['(NA)'])
+data_isotope_corn = pd.read_csv('~/Data/leaf13C.csv', index_col=0, na_values=['(NA)'])
 
 data_isotope_corn['latitude'] = data_isotope_corn['latitude'].apply(pd.to_numeric, errors='coerce')
 data_isotope_corn['longitude'] = data_isotope_corn['longitude'].apply(pd.to_numeric, errors='coerce')
@@ -1002,7 +1002,7 @@ ax.text(0.05, 0.95, '(d) Luo2024',transform=ax.transAxes,va = 'top',fontsize=16)
 ax.text(0.58, 0.12, u'$R^2$ = O.37',transform=ax.transAxes,va = 'top',fontsize=16)
 
 
-fig_figure1.savefig('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Figure1.pdf', bbox_inches='tight')
+fig_figure1.savefig('~/Figure1.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -1120,7 +1120,7 @@ ax=plt.gca()
 fig_figure2.colorbar(diff, ax, orientation='vertical').set_label(u'$F_4$')
 
 
-fig_figure2.savefig('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Figure2.pdf', bbox_inches='tight')
+fig_figure2.savefig('~/Figure2.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -1290,7 +1290,7 @@ ax=plt.gca()
 fig_figure3.colorbar(diff, ax, orientation='vertical').set_label(u'$F_{4}$ trend (yr$^{-1}$)')
 
 
-fig_figure3.savefig('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Figure3.pdf', bbox_inches='tight')
+fig_figure3.savefig('~/Figure3.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -1609,7 +1609,7 @@ for i in range(16):
 
 ## Upload Keeling et al. data
 
-Keeling_data = pd.read_csv('/Users/alienorlavergne/Desktop/Research and Teaching/Data/Isotopes/D13Catm/Keeling2017data.csv', header=0, names=['Year', 'D13Catm']) #, index_col=0, na_values=['(NA)'])
+Keeling_data = pd.read_csv('~/Data/Isotopes/D13Catm/Keeling2017data.csv', header=0, names=['Year', 'D13Catm']) #, index_col=0, na_values=['(NA)'])
 
 year = np.arange(0,35)+1982
 
@@ -2010,7 +2010,7 @@ ax.text(0.05, 0.99, '(f)',transform=ax.transAxes,va = 'top',fontsize=14)
 ax.tick_params(labelsize=12)
 
 
-fig_figure4.savefig('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Figure4.pdf', bbox_inches='tight')
+fig_figure4.savefig('~/Figure4.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -2496,7 +2496,7 @@ ax.get_yaxis().tick_left()
 ax.tick_params(labelsize=12)
 
 
-fig_figure5.savefig('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Figure5.pdf', bbox_inches='tight')
+fig_figure5.savefig('~/Figure5.pdf', bbox_inches='tight')
 
 plt.close()
 
