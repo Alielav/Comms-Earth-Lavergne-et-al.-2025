@@ -120,7 +120,7 @@ mymap = mcolors.LinearSegmentedColormap.from_list('my_colormap', colors)
 ### CLIMATE
 
 ## Daytime temperature (estimated from WATCH WFDEI product)
-ds1 = netCDF4.Dataset('Data/splash_1979_2018_WATCH_WFDEI/1979_2018_Tdaytime.nc')
+ds1 = netCDF4.Dataset('~/Data/splash_1979_2018_WATCH_WFDEI/1979_2018_Tdaytime.nc')
 ds1.set_auto_mask(False)
 temp = ds1['Tdtime'][:]
 ## 1982:2016 period
