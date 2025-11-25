@@ -21,7 +21,6 @@ SSPY1 = data1['SSPY']  # Outputs
 param1 = data1['param']  # Parameters
 inputdata1 = data1['inputdata']  # Inputs
 d13C1= data1['atmospheric d13C']  # Atmospheric d13CO2
-D14C1= data1['atmospheric D14C']  # Atmospheric D14CO2
 
 # variable Δ as in K2017 (with CO2 effect from Schubert and Jahren (2015)) and constant C4 fraction
 data2 = loadmat('Simus_variable_delta_constant_fracc4_K2017.mat')  
@@ -29,7 +28,6 @@ SSPY2 = data2['SSPY']  # Outputs
 param2 = data2['param']  # Parameters
 inputdata2 = data2['inputdata']  # Inputs
 d13C2= data2['atmospheric d13C']  # Atmospheric d13CO2
-D14C2= data2['atmospheric D14C']  # Atmospheric D14CO2
 
 
 ## Simulations with 3 boxes and C3/C4 model as in Lavergne et al. 2025 CEE
@@ -41,7 +39,6 @@ SSPY3 = data3['SSPY']  # Outputs
 param3 = data3['param']  # Parameters
 inputdata3 = data3['inputdata']  # Inputs
 d13C3= data3['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
-D14C3= data3['atmospheric - ocean - biosphere D14C']  # Atmospheric D14CO2
 
 # variable Δ with constant C4 fraction and cO2 fertilisation removed for box 1
 data4 = loadmat('Simus_variable_delta_constant_fracc4_L2025.mat')  
@@ -49,7 +46,6 @@ SSPY4 = data4['SSPY']  # Outputs
 param4 = data4['param']  # Parameters
 inputdata4 = data4['inputdata']  # Inputs
 d13C4= data4['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
-D14C4= data4['atmospheric - ocean - biosphere D14C']  # Atmospheric D14CO2
 
 # variable Δ with variable C4 fraction and CUE and cO2 fertilisation removed for box 1
 data5 = loadmat('Simus_variable_delta_variale_fracc4_L2025.mat') 
@@ -57,7 +53,6 @@ SSPY5 = data5['SSPY']  # Outputs
 param5 = data5['param']  # Parameters
 inputdata5 = data5['inputdata']  # Inputs
 d13C5= data5['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
-D14C5= data5['atmospheric - ocean - biosphere D14C']  # Atmospheric D14CO2
 
 # Constants and parameters
 C14prog = 0  # Change to zero so that BDprecalc does not attempt to load ex14sourcef input file
@@ -125,7 +120,6 @@ def BDreaddata(filename):
 
 # Define datafiles used in all simulations
 del13atmf = 'c13_cmip6_hist.txt'
-del14atmf = 'c14_cmip6_hist.txt'
 
 
 # List of future scenario names
@@ -145,44 +139,21 @@ inputdata['C14time'], inputdata['C14data'] = BDreaddata(del14atmf)
 timespan_C14 = [inputdata['C14time'][0], inputdata['C14time'][-1]]
 
 # Max, min, mid values
-maxD14C1 = np.max(D14C1, axis=2)
-minD14C1 = np.min(D14C1, axis=2)
-midD14C1 = (maxD14C1 + minD14C1) / 2
-
 maxd13C1 = np.max(d13C1, axis=2)
 mind13C1 = np.min(d13C1, axis=2)
 midd13C1 = (maxd13C1 + mind13C1) / 2
- 
-    
-maxD14C2 = np.max(D14C2, axis=2)
-minD14C2 = np.min(D14C2, axis=2)
-midD14C2 = (maxD14C2 + minD14C2) / 2
 
 maxd13C2 = np.max(d13C2, axis=2)
 mind13C2 = np.min(d13C2, axis=2)
 midd13C2 = (maxd13C2 + mind13C2) / 2
 
-
-maxD14C3 = np.max(D14C3, axis=2)
-minD14C3 = np.min(D14C3, axis=2)
-midD14C3 = (maxD14C3 + minD14C3) / 2
-
 maxd13C3 = np.max(d13C3, axis=2)
 mind13C3 = np.min(d13C3, axis=2)
 midd13C3 = (maxd13C3 + mind13C3) / 2
 
-maxD14C4 = np.max(D14C4, axis=2)
-minD14C4 = np.min(D14C4, axis=2)
-midD14C4 = (maxD14C4 + minD14C4) / 2
-
 maxd13C4 = np.max(d13C4, axis=2)
 mind13C4 = np.min(d13C4, axis=2)
 midd13C4 = (maxd13C4 + mind13C4) / 2
-
-
-maxD14C5 = np.nanmax(D14C5, axis=2)
-minD14C5 = np.nanmin(D14C5, axis=2)
-midD14C5 = (maxD14C5 + minD14C5) / 2
 
 maxd13C5 = np.nanmax(d13C5, axis=2)
 mind13C5 = np.nanmin(d13C5, axis=2)
