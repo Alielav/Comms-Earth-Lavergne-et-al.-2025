@@ -7,7 +7,7 @@ Lavergne et al. (accepted in principle) The recent decline in C4 vegetation abun
 
 Script to run the C3/C4 competition model and plot figures 1-5: C3C4_model_simulations_analyses.py
 
-Script to run a modified version of Graven et al. (2020) model: Graven2020_Python_three_vegetation_boxes_C3_C4_plants_L2025.py
+Script to run a modified version of Graven et al. (2020) model: Graven et al. 2020 model Python version with three vegetation boxes and C3 C4 plants - L2025.py
 
 Script to plot output from modified Graven et al. (2020) model and produce Figure 6: Plot_outputs_carbon_cycle_model_L2025_figure 6.py
 
