@@ -16,7 +16,7 @@ from scipy.interpolate import interp1d
 
 ## Keeling et al. (2017) simulations
 # constant Δ (18 permil) and constant C4 fraction
-data1 = loadmat('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Simus_constant_delta_constant_fracc4_K2017.mat')  
+data1 = loadmat('Simus_constant_delta_constant_fracc4_K2017.mat')  
 SSPY1 = data1['SSPY']  # Outputs
 param1 = data1['param']  # Parameters
 inputdata1 = data1['inputdata']  # Inputs
@@ -24,7 +24,7 @@ d13C1= data1['atmospheric d13C']  # Atmospheric d13CO2
 D14C1= data1['atmospheric D14C']  # Atmospheric D14CO2
 
 # variable Δ as in K2017 (with CO2 effect from Schubert and Jahren (2015)) and constant C4 fraction
-data2 = loadmat('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Simus_variable_delta_constant_fracc4_K2017.mat')  
+data2 = loadmat('Simus_variable_delta_constant_fracc4_K2017.mat')  
 SSPY2 = data2['SSPY']  # Outputs
 param2 = data2['param']  # Parameters
 inputdata2 = data2['inputdata']  # Inputs
@@ -36,7 +36,7 @@ D14C2= data2['atmospheric D14C']  # Atmospheric D14CO2
 # box 1: C4 plants / box 2 and 3: C3 plants
 
 # constant Δ with constant C4 fraction
-data3 = loadmat('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Simus_constant_delta_constant_fracc4_L2025.mat')  
+data3 = loadmat('Simus_constant_delta_constant_fracc4_L2025.mat')  
 SSPY3 = data3['SSPY']  # Outputs
 param3 = data3['param']  # Parameters
 inputdata3 = data3['inputdata']  # Inputs
@@ -44,7 +44,7 @@ d13C3= data3['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
 D14C3= data3['atmospheric - ocean - biosphere D14C']  # Atmospheric D14CO2
 
 # variable Δ with constant C4 fraction and cO2 fertilisation removed for box 1
-data4 = loadmat('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Simus_variable_delta_constant_fracc4_L2025.mat')  
+data4 = loadmat('Simus_variable_delta_constant_fracc4_L2025.mat')  
 SSPY4 = data4['SSPY']  # Outputs
 param4 = data4['param']  # Parameters
 inputdata4 = data4['inputdata']  # Inputs
@@ -52,7 +52,7 @@ d13C4= data4['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
 D14C4= data4['atmospheric - ocean - biosphere D14C']  # Atmospheric D14CO2
 
 # variable Δ with variable C4 fraction and CUE and cO2 fertilisation removed for box 1
-data5 = loadmat('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Simus_variable_delta_variale_fracc4_L2025.mat') 
+data5 = loadmat('Simus_variable_delta_variale_fracc4_L2025.mat') 
 SSPY5 = data5['SSPY']  # Outputs
 param5 = data5['param']  # Parameters
 inputdata5 = data5['inputdata']  # Inputs
@@ -304,7 +304,7 @@ ax.tick_params(labelsize=12)
 ax.legend(['Observed','Constant Δ & F$_{4}$','Variable Δ & constant F$_{4}$','Variable Δ & F$_{4}$'], fontsize=12, loc='center left', bbox_to_anchor= (-1.7, -0.2), ncol=4,
             borderaxespad=0, frameon=False)
 
-fig_figure6.savefig('/Users/alienorlavergne/Desktop/Data code CEE 2025 paper/Figure6.pdf', bbox_inches='tight')
+fig_figure6.savefig('Figure6.pdf', bbox_inches='tight')
 
 plt.close()
 
