@@ -5,7 +5,7 @@ Lavergne et al. (accepted) The recent decline in C4 vegetation abundance exerts 
 
 # The script written in Python and input data are:
 
-Script to run and plot figures 1-5: C3C4_model_simulations_analyses.py
+Script to run the C3/C4 competition model and plot figures 1-5: C3C4_model_simulations_analyses.py
 
 Script to run a modified version of Graven et al. (2020) model: Graven2020_Python_three_vegetation_boxes_C3_C4_plants_L2025.py
 
