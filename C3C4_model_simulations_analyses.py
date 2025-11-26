@@ -126,6 +126,10 @@ temp = ds1['Tdtime'][:]
 ## 1982:2016 period
 temp = temp[36:456,:,:]
 temp = temp[:,::-1,:]
+lat1=ds1.variables['lat'][:]
+lon1=ds1.variables['lon'][:]
+lat1 = lat1[::-1]
+
 ds1.close()
 
 
@@ -141,47 +145,6 @@ ds3 = netCDF4.Dataset('~/Data/elev.nc')
 ds3.set_auto_mask(False)
 elev = ds3['elev'][:]  # Note - temporally constant but repeated
 ds3.close()
-
-
-## Vapour pressure deficit (estimated from WATCH WFDEI product)
-ds4 = netCDF4.Dataset('~/Data/splash_1979_2018_WATCH_WFDEI/1979_2018_vpd.nc')
-ds4.set_auto_mask(False)
-vpd = ds4['vpd'][:]
-## 1982:2016 period
-vpd = vpd[36:456,:,:]
-vpd = vpd[:,::-1,:]
-ds4.close()
-
-
-## fraction of absorbed photosynthetic active radiation (fAPAR3g product)
-ds5 = netCDF4.Dataset('~/Data/fAPAR/fAPAR3g_v2/fAPAR3g_v2_1982_2016_FILLED.nc')
-ds5.set_auto_mask(False)
-fapar = ds5['FAPAR_FILLED'][:]
-ds5.close()
-
-
-## Photosynthetic Photon Flux Density (WATCH WFDEI product)
-ds6 = netCDF4.Dataset('~/Data/watch_wfdei/PPFD_monthly/1982_2016.ppfd.nc')
-ds6.set_auto_mask(False)
-ppfd = ds6['ppfd'][:]
-ppfd = ppfd[:,::-1,:]
-
-lat1=ds6.variables['lat'][:]
-lon1=ds6.variables['lon'][:]
-lat1 = lat1[::-1]
-
-ds6.close()
-
-
-## Soil moisture from SPLASH (estimated from WATCH WFDEI product)
-ds7 = netCDF4.Dataset('~/Data/splash_1979_2018_WATCH_WFDEI/1979_2018.theta.nc')
-ds7.set_auto_mask(False)
-theta = ds7['theta'][:]
-## 1982:2016 period
-theta = theta[36:456,:,:]
-theta = theta[:,::-1,:]
-
-ds7.close()
 
 
 ## Atmospheric d13CO2 
