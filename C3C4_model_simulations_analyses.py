@@ -1570,10 +1570,6 @@ for i in range(16):
 
 ## Figure 4
 
-## Upload Keeling et al. data
-
-Keeling_data = pd.read_csv('~/Data/Isotopes/D13Catm/Keeling2017data.csv', header=0, names=['Year', 'D13Catm']) #, index_col=0, na_values=['(NA)'])
-
 year = np.arange(0,35)+1982
 
 # Set up the subplot figure
