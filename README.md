@@ -3,13 +3,11 @@ This repository contains the Python script to run the C3/C4 competition model an
 
 Lavergne et al. (accepted in principle) The recent decline in C4 vegetation abundance exerts little impact on atmospheric carbon isotopic composition, Communications Earth & Environment
 
-# The script written in Python and input data are:
-
-Script to run the C3/C4 competition model and plot Figures 1-5: C3C4_model_simulations_analyses.py
-
-Script to run a modified version of Graven et al. (2020) model: Graven et al. 2020 model Python version with three vegetation boxes and C3 C4 plants - L2025.py
-
-Script to plot output from modified Graven et al. (2020) model and produce Figure 6: Plot outputs carbon cycle model L2025 - figure 6.py
+# Code availability
+The scripts are written in Python.
+- Script to run the C3/C4 competition model and plot Figures 1-5: C3C4_model_simulations_analyses.py
+- Script to run a modified version of Graven et al. (2020) model: Graven et al. 2020 model Python version with three vegetation boxes and C3 C4 plants - L2025.py
+- Script to plot output from modified Graven et al. (2020) model and produce Figure 6: Plot outputs carbon cycle model L2025 - figure 6.py
 
 # Data availability
 - Processed climate data and model outputs to run .py scripts are available at: 10.5281/zenodo.17726762
