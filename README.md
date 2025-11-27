@@ -1,7 +1,7 @@
 # Comms-Earth-Lavergne-et-al.-2025
 This repository contains the Python script to run the C3/C4 competition model and Graven et al. (2020) simple carbon cycle model, analyse simulations and create the figures presented in:
 
-Lavergne, A., Harrison, S.P., Atsawawaranunt, K., Dong, N., Prentice, I.C. (in press) The recent decline in C4 vegetation abundance exerts little impact on atmospheric carbon isotopic composition, Communications Earth & Environment
+Lavergne, A., Harrison, S.P., Atsawawaranunt, K., Dong, N., Prentice, I.C. (in press) Minimal impact of recent decline in C4 vegetation abundance on atmospheric carbon isotopic composition, Communications Earth & Environment
 
 # Code availability
 The scripts are written in Python.
