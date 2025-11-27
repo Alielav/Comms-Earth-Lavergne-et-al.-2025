@@ -17,12 +17,10 @@ from scipy.interpolate import interp1d
 ## Keeling et al. (2017) simulations
 # constant Δ (18 permil) and constant C4 fraction
 data1 = loadmat('Simus_constant_delta_constant_fracc4_K2017.mat')  
-inputdata1 = data1['inputdata']  # Inputs
 d13C1= data1['atmospheric d13C']  # Atmospheric d13CO2
 
 # variable Δ as in K2017 (with CO2 effect from Schubert and Jahren (2015)) and constant C4 fraction
 data2 = loadmat('Simus_variable_delta_constant_fracc4_K2017.mat')  
-inputdata2 = data2['inputdata']  # Inputs
 d13C2= data2['atmospheric d13C']  # Atmospheric d13CO2
 
 
@@ -31,17 +29,14 @@ d13C2= data2['atmospheric d13C']  # Atmospheric d13CO2
 
 # constant Δ with constant C4 fraction
 data3 = loadmat('Simus_constant_delta_constant_fracc4_L2025.mat')  
-inputdata3 = data3['inputdata']  # Inputs
 d13C3= data3['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
 
 # variable Δ with constant C4 fraction and cO2 fertilisation removed for box 1
 data4 = loadmat('Simus_variable_delta_constant_fracc4_L2025.mat')  
-inputdata4 = data4['inputdata']  # Inputs
 d13C4= data4['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
 
 # variable Δ with variable C4 fraction and CUE and cO2 fertilisation removed for box 1
 data5 = loadmat('Simus_variable_delta_variale_fracc4_L2025.mat') 
-inputdata5 = data5['inputdata']  # Inputs
 d13C5= data5['atmospheric - ocean - biosphere d13C']  # Atmospheric d13CO2
 
 # Constants and parameters
