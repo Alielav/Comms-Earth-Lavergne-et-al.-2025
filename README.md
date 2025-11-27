@@ -16,7 +16,7 @@ The scripts are written in Python.
 - MODIS Land Processes Distributed Active Archive Center (LP DAAC) landcover for snowandice (modis_snowandice_0.5d-2010.nc) and barren_sparsely_vegetated (modis_barren_sparsely_vegetated_0.5d-2010.nc) is derived from https://www.earthdata.nasa.gov/data/catalog/lpcloud-mcd12q1-061 but was regridded to 0.5x0.5 spatial resolution and is available at https://zenodo.org/records/17726762.
 - The map of fraction of C4 plants from Still et al. (2009) is available at https://doi.org/10.3334/ORNLDAAC/932.
 - The global C4 distribution map developed by Luo et al. (2024) is available at https://zenodo.org/records/10516423.
-- The updated AVHRR GIMMS fAPAR data until 2016 were made available by R. Myneni (data request contact: rmyneni@bu.edu).
+- The AVHRR GIMMS fAPAR data is derived from Zhu et al. (2013) and was updated until 2016 and made available by R. Myneni (data request contact: rmyneni@bu.edu).
 - The concentrations and isotopic compositions of atmospheric CO2 are available in the Supplementary Material of Köhler et al. (2017), Graven et al. (2017) and Graven et al. (2020) papers, respectively but also available at https://zenodo.org/records/17726762. 
 - The soil carbon isotopic data were extracted from Dong et al. (2022) and is available at https://doi.org/10.5281/zenodo.6556096. The subset of published data used to test the predictive skills of the model is also available here Glob_Soil_δ13C.csv.
 - The leaf carbon isotopic data are derived from Cornwell et al. (2018) and available in the original paper. The subset of data used for the purpose of this paper is also available here leaf13C.csv.
@@ -31,23 +31,18 @@ This research is a contribution to the LEMONTREE (Land Ecosystem Models based On
 
 
 # References
-Cornwell et al. (2018)
+Cornwell, W. K. et al. Climate and soils together regulate photosynthetic carbon isotope discrimination within C3 plants worldwide. Glob. Ecol. Biogeogr. 27, 1056–1067 (2018).
 
-Dong et al. (2022)
+Dong, N. et al. Global Datasets of Carbon Isotope Composition (δ13C) for Ecological and Earth System Research. https://doi.org/10.5281/zenodo.6556096 (2022).
 
-Graven et al. (2017) 
+Graven, H. et al. Compiled records of carbon isotopes in atmospheric CO2 for historical simulations in CMIP6. Geosci. Model Dev. 10, 4405–4417 (2017).
 
-Graven et al. (2020)
+Graven, H., Keeling, R. F. & Rogelj, J. Changes to Carbon Isotopes in Atmospheric CO2 Over the Industrial Era and Into the Future. Glob. Biogeochem. Cycles 34, (2020).
 
-Köhler et al. (2017)
+Köhler, P., Nehrbass-Ahles, C., Schmitt, J., Stocker, T. F. & Fischer, H. A 156 kyr smoothed history of the atmospheric greenhouse gases CO2, CH4, and N2O and their radiative forcing. Earth Syst. Sci. Data 9, 363–387 (2017).
 
-Lin et al. (2015) 
+Luo, X. et al. Mapping the global distribution of C4 vegetation using observations and optimality theory. Nat. Commun. 15, 1219 (2024).
 
-Luo et al. (2024)
+Still, C. J., Berry, J., Collatz, G. J. & DeFries, R. ISLSCP II C4 Vegetation Percentage. (2009).
 
-Paruelo et al. (1996)
-
-Paruelo et al. (1998)
-
-Still et al. (2009)
-
+Zhu, Z. et al. Global Data Sets of Vegetation Leaf Area Index (LAI)3g and Fraction of Photosynthetically Active Radiation (FPAR)3g Derived from Global Inventory Modeling and Mapping Studies (GIMMS) Normalized Difference Vegetation Index (NDVI3g) for the Period 1981 to 2011. Remote Sens. 5, 927–948 (2013).
