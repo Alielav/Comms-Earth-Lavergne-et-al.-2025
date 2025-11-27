@@ -10,16 +10,16 @@ The scripts are written in Python.
 - Script to plot output from modified Graven et al. (2020) model and produce Figure 6: Plot outputs carbon cycle model L2025 - figure 6.py
 
 # Data availability
-- Processed climate data and model outputs to run .py scripts are available at https://zenodo.org/records/17726762
+- Processed climate data and model outputs to run .py scripts are available at https://zenodo.org/records/17726762.
 - The annual percentage treecover from MEaSURES VCF5KYR v001 (VCF5KYR_1982_2016_05d.nc) is available at https://doi.org/10.5067/MEaSUREs/VCF/VCF5KYR.001.
 - Urban areas and C3 and C4 crop distribution from LUHv2-2019 data are available at https://daac.ornl.gov/VEGETATION/guides/LUH2_GCB2019.html.
-- MODIS Land Processes Distributed Active Archive Center (LP DAAC) landcover for snowandice (modis_snowandice_0.5d-2010.nc) and barren_sparsely_vegetated (modis_barren_sparsely_vegetated_0.5d-2010.nc) is derived from https://www.earthdata.nasa.gov/data/catalog/lpcloud-mcd12q1-061 but was regridded to 0.5x0.5 spatial resolution and is available at https://zenodo.org/records/17726762
+- MODIS Land Processes Distributed Active Archive Center (LP DAAC) landcover for snowandice (modis_snowandice_0.5d-2010.nc) and barren_sparsely_vegetated (modis_barren_sparsely_vegetated_0.5d-2010.nc) is derived from https://www.earthdata.nasa.gov/data/catalog/lpcloud-mcd12q1-061 but was regridded to 0.5x0.5 spatial resolution and is available at https://zenodo.org/records/17726762.
 - The map of fraction of C4 plants from Still et al. (2009) is available at https://doi.org/10.3334/ORNLDAAC/932.
 - The global C4 distribution map developed by Luo et al. (2024) is available at https://zenodo.org/records/10516423.
 - The updated AVHRR GIMMS fAPAR data until 2016 were made available by R. Myneni (data request contact: rmyneni@bu.edu).
-- The concentrations and isotopic compositions of atmospheric CO2 are available in the Supplementary Material of Köhler et al. (2017), Graven et al. (2017) and Graven et al. (2020) papers, respectively but also availale in 10.5281/zenodo.17726762. 
-- The soil carbon isotopic data were extracted from Dong et al. (2022) and is available at https://doi.org/10.5281/zenodo.6556096. The subset of published data used to test the predictive skills of the model is also available here: Glob_Soil_δ13C.csv
-- The leaf carbon isotopic data are derived from Cornwell et al. (2018) and available in the original paper. The subset of data used for the purpose of this paper is also available here: leaf13C.csv
+- The concentrations and isotopic compositions of atmospheric CO2 are available in the Supplementary Material of Köhler et al. (2017), Graven et al. (2017) and Graven et al. (2020) papers, respectively but also available at https://zenodo.org/records/17726762. 
+- The soil carbon isotopic data were extracted from Dong et al. (2022) and is available at https://doi.org/10.5281/zenodo.6556096. The subset of published data used to test the predictive skills of the model is also available here Glob_Soil_δ13C.csv.
+- The leaf carbon isotopic data are derived from Cornwell et al. (2018) and available in the original paper. The subset of data used for the purpose of this paper is also available here leaf13C.csv.
 
 
 # Author and contact
