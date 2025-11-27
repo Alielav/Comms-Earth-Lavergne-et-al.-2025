@@ -10,10 +10,10 @@ The scripts are written in Python.
 - Script to plot output from modified Graven et al. (2020) model and produce Figure 6: Plot outputs carbon cycle model L2025 - figure 6.py
 
 # Data availability
-- Processed climate data and model outputs to run .py scripts are available at https://zenodo.org/records/17726762.
-- The annual percentage treecover from MEaSURES VCF5KYR v001 is available at https://doi.org/10.5067/MEaSUREs/VCF/VCF5KYR.001 but was regridded to 0.5x0.5 spatial resolution (VCF5KYR_1982_2016_05d.nc) and is available at https://zenodo.org/records/17726762.
+- Processed climate data and model outputs to run the Python scripts are available at https://zenodo.org/records/17726762.
+- The annual percentage treecover from MEaSURES VCF5KYR v001 is available at https://doi.org/10.5067/MEaSUREs/VCF/VCF5KYR.001 (0.05°x0.05° spatial resolution) but was regridded to 0.5°x0.5° spatial resolution and is available at https://zenodo.org/records/17726762 (VCF5KYR_1982_2016_05d.nc).
 - Urban areas and C3 and C4 crop distribution from LUHv2-2019 data are available at https://daac.ornl.gov/VEGETATION/guides/LUH2_GCB2019.html.
-- MODIS Land Processes Distributed Active Archive Center (LP DAAC) landcover for snowandice and barren_sparsely_vegetated are derived from https://www.earthdata.nasa.gov/data/catalog/lpcloud-mcd12q1-061 but was regridded to 0.5x0.5 spatial resolution (modis_snowandice_0.5d-2010.nc, modis_barren_sparsely_vegetated_0.5d-2010.nc) and are available at https://zenodo.org/records/17726762.
+- MODIS Land Processes Distributed Active Archive Center (LP DAAC) landcover for snowandice and barren_sparsely_vegetated are derived from https://www.earthdata.nasa.gov/data/catalog/lpcloud-mcd12q1-061 (0.05°x0.05° spatial resolution) but was regridded to 0.5°x0.5° spatial resolution and are available at https://zenodo.org/records/17726762 (modis_snowandice_0.5d-2010.nc, modis_barren_sparsely_vegetated_0.5d-2010.nc). 
 - The map of fraction of C4 plants from Still et al. (2009) is available at https://doi.org/10.3334/ORNLDAAC/932.
 - The global C4 distribution map developed by Luo et al. (2024) is available at https://zenodo.org/records/10516423.
 - The AVHRR GIMMS fAPAR data is derived from Zhu et al. (2013) and was updated until 2016 and made available by R. Myneni (data request contact: rmyneni@bu.edu).
